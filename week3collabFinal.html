@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <!-----------------------------------------  STYLE SHEET 0  ---------------------------------------------------------->
+  <style>
+    /* #0 - Derrik Milligan */
+    body {
+      display: block;
+      width: 80vw;
+      max-width: 1024px;
+      margin: 0 auto;
+      font-size: 20px;
+      background-color: #F0F0F0;
+      transform: scale(1);
+      animation: pulse 1s infinite;
+    }
+
+    .menuBarItem, #text a {
+      color: white;
+      padding: 5px 10px;
+      width: 300px;
+      background-color: blue;
+      border: 1px solid black;
+      border-radius: 10px;
+      transition: all 0.1s;
+      list-style: none;
+      margin: 10px;
+    }
+
+    .menuBarItem:hover {
+      cursor: pointer;
+      transform: scale(1.1, 1.1);
+    }
+
+    .menuBarItem::after {
+      content: "(Click to change)";
+      font-size: 12px;
+      padding-left: 10px;
+    }
+
+    h1, h2 {
+      color: green;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(0.98);
+      }
+
+      60% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(0.98);
+      }
+    }
+  </style>
+  <!-----------------------------------------  STYLE SHEET 1  ---------------------------------------------------------->
+  <style>
+    /* #1 */
+    body {
+        font-size: 25px;
+        font-family: fantasy;
+        color: magenta;
+        background-color: black;
+        margin: 100px 20px;
+        overflow-y: clip;
+        max-height: 5000px; /* approximate max height */
+        transition-property: all;
+        transition-duration: .9s;
+        transition-timing-function: cubic-bezier(.17,1.80,.2,.67);
+    }
+​
+    #title {
+        color: mediumaquamarine;
+    }
+    ​
+    #menuBar {
+        position: fixed;
+        height: auto;
+        width: 400px;
+        top: 0;
+        right: 0;
+        color: green;
+        /* typewriter effect which I took from the internet and then modified for 
+        my purposes */
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .1em; /* Adjust as needed */
+        animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .2s step-end infinite;
+    }
+​
+    #text {
+        background-color: rgba(36, 99, 172, 0.8);
+        border: crimson solid 7px;
+        padding: 10px;
+    }
+    ​
+    #sidebar {
+        color: #eff30b;
+    }
+    
+    /* The typing effect */
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 43% }
+    }
+    
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange; }
+    }
+  </style>
+  <!-----------------------------------------  STYLE SHEET 2  ---------------------------------------------------------->
+  <style>/*#2 - Dallas Eaton*/
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+    body {
+      font-size:20px; 
+      color: white; font-family: 'Ubuntu Mono', monospace; 
+      background-color: black; 
+      text-shadow: 2px 0px 4px 2px azure; 
+      display: inline;
+      direction: rtl;
+    }
+    
+    p, div {
+      font-variant: small-caps;
+      animation: bCycle 10s infinite;
+    }
+    
+    h1, h3, a, #menuBarList {
+      writing-mode: vertical-rl;
+      text-orientation: sideways;
+      float: right;
+      animation: bCycle 10s infinite;
+      color: green; 
+      text-decoration: none;
+      list-style: none;
+    }
+    
+    a:hover, li:hover, div{
+      color: #f09d09;
+    }
+    
+    @keyframes bCycle { 
+      50%, 50% {text-shadow: 2px 0px 4px 2px blue; font-family: 'Caesar Dressing', cursive; color: black; background-color: white; border-radius: 10px;}
+    }
+
+    .descriptions, .descriptions li {
+      writing-mode: initial;
+      text-orientation: upright;
+      direction: ltr;
+      text-align: left;
+    }
+  </style>
+  <!-----------------------------------------  STYLE SHEET 3  ---------------------------------------------------------->
+  <style>
+    /* #3 */
+    .document {
+        background: white;
+    }
+    body {
+      font-size: 12px;
+      display: block;
+      width: 80vw;
+      max-width: 1024px;
+      margin: 0 auto;
+      font-size: 20px;
+      background-color: #F0F0F0;
+    }
+
+    /* Dallas */
+    #title, #title h1{
+      display: inline-flex;
+      margin: 1px 0 -1px 0;
+      background-color: #212121;
+      padding: 5px 25px 5px 16px;
+      border-radius: 10px 10px 3px 3px;
+      color: yellowgreen;
+    }
+    /* Dallas */
+    #title p{
+      color: azure; 
+      margin: 30px 0px 28px 0px;
+    }
+    /* Dallas */
+    #menuBarList {
+      display: flex;
+      margin: 0;
+      padding-left: 0%;
+    }
+    /* Dallas */
+    #text a{
+      padding: 1.75em;
+      text-decoration: none;
+      font-variant: small-caps;
+      color:royalblue;
+      -webkit-text-stroke-width: thin;
+    }
+    /* Dallas */
+    #text a:hover{
+      color: darkgoldenrod;
+      text-shadow: 2px 0px 1px blanchedalmond;
+    }
+    /* Dallas */
+    .descriptions {
+      padding: 0.75em;
+      background-color: azure;
+      width: 95%;
+      margin: auto;
+      border-radius: 8px;
+      border: 1px dashed #29bbff;
+    }
+    /* Dallas */
+    .descriptions h4 {
+      color: royalblue;
+    }
+    /* Dallas */
+    .descriptions li {
+      list-style:decimal-leading-zero;
+      list-style-position: inside;
+      color: #212121;
+    }
+    /* Dallas */
+    #text p {
+      color: #212121;
+      border: 1px dashed #29bbff;
+      padding: 0.75em;
+      background-color: azure;
+      border-radius: 8px;
+    }
+    /* Dallas */
+    #text h1, h2 {
+      text-decoration: underline;
+      text-shadow: 0px 0px 3px yellowgreen;
+    }
+    /* Dallas */
+    #text{
+      width: 95%;
+      margin: auto;
+    }
+    /* Dallas */
+    #sidebar{
+      border: 1.5px dashed #212121;
+      border-radius: 12px;
+      font-variant: small-caps;
+      text-align: center;
+      display: inline-flex;
+      padding: .25em;
+      background: lightyellow;
+    }
+    /* Dallas */
+    #sidebar p{
+      text-align: left;
+      margin: auto;
+    }
+    /* Dallas */
+    #sidebar h3{
+      margin: unset;
+      padding-right: 20px;
+    }
+    /* Dallas */
+    hr {
+      height: 1px;
+    }
+    /* Dallas */
+    #bottom {
+      color: azure;
+      background-color: #212121;
+      padding: 1em;
+      border-radius: 0 0 10px 10px;
+    }
+    
+    .menuBarItem {
+      box-shadow:inset 0px -3px 7px 0px #29bbff;
+      background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+      background-color:#2dabf9;
+      border-radius:3px;
+      border:1px solid #0b0e07;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:15px;
+      padding: 10px 25px 10px 25px;
+      text-align:center;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #263666;
+      width: -webkit-fill-available;
+    }
+    .menuBarItem:hover {
+      background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+      background-color:#0688fa;
+    }
+    .menuBarItem:active {
+      position:relative;
+      top:1px;
+    }
+
+    h1, h2 {
+      color: darkgreen;
+    }
+
+  </style>
+  <!-----------------------------------------  HTML  ---------------------------------------------------------->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Week 03 : CSS</title>
+</head>
+
+<body onload="disableStyles()">
+  <div class="document">
+    <div id="title">
+      <h1>Week 03 : CSS</h1>
+      <p>This page will demonstrate how to switch between different CSS stylesheets to achieve a given effect</p>
+    </div>
+    <!--title -->
+    <div class="content">
+      <div id="menuBar">
+        <ul id="menuBarList">
+          <li class="menuBarItem" onclick="applyStyle(0)">Stylesheet 1</li>
+          <li class="menuBarItem" onclick="applyStyle(1)">Stylesheet 2</li>
+          <li class="menuBarItem" onclick="applyStyle(2)">Stylesheet 3</li>
+          <li class="menuBarItem" onclick="applyStyle(3)">Stylesheet 4</li>
+          <li class="menuBarItem" onclick="disableStyles()">No Stylesheet</li>
+        </ul>
+      </div> <!-- menuBar -->
+      <div id="text">
+        <h1>Select the Stylesheet</h1>
+        <p>
+          There are four stylesheets that you may select from. Each one will change the coloring, fonts,
+          and even the layout of the page.You can change the layout of this page by selecting different
+          stylesheets in the menu, or by selecting one of the following links:
+          <br><br>
+          <a href="#" onclick="applyStyle(0)">Stylesheet 1</a>,
+          <a href="#" onclick="applyStyle(1)">Stylesheet 2</a>,
+          <a href="#" onclick="applyStyle(2)">Stylesheet 3</a>,
+          <a href="#" onclick="applyStyle(3)">Stylesheet 4</a>.
+        </p>
+        <h1>Instructions</h1>
+        <p>
+          Please modify this page to include a description of each stylesheet, including anything clever that
+          you did to achieve a given effect. Please also include the contributors to a given stylesheet.
+        </p>
+      </div> <!-- text -->
+      <div id="sidebar">
+        <h3>Grading</h3>
+        <p>
+          In order to get full credit for this assignment, you will need to demonstrate what you have learned
+          and how you helped your classmates. This means your contribution needs to be briefly described
+          on the page.
+        </p>
+      </div>
+      <!--sidebar -->
+    </div> <!-- content -->
+    <hr>
+    <div class="descriptions">
+      <div class="sheet-0">
+        <h2>Stylesheet 0 - Derrik Milligan</h2>
+        <h4>Changes:</h4>
+        <ul>
+          <li>Gave the body some sizing to have things look more formatted</li>
+          <li>Added a terrible pulse animation to the whole body... Sorry</li>
+          <li>Made the links some crazy blue buttons. They increase in size when you hover on them</li>
+          <li>Added Green headers</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="sheet-1">
+        <h2>Stylesheet 1 - Adam Ricks</h2>
+        <h4>Changes (Adam):</h4>
+        <ul>
+          <li>Changed all the colors</li>
+          <li>Added an animation on load-up</li>
+          <li>Added a typing animation to the menu on the top</li>  
+        </ul>
+      </div>
+      <hr>
+      <div class="sheet-2">
+        <h2>Stylesheet 2 - Dallas Eaton</h2>
+        <h4>Changes:</h4>
+        <ul>
+          <li>Design is totally out there and obnoxious, but I implemented some very interesting CSS properties.</li>
+          <li>Changed the writing mode to 'direction: rtl' which writes text starting from the right side of page.</li>
+          <li>@keyframes to have the screen switch back and forth between two different settings every 10sec.</li>
+          <li>Showcased the contrast by using alternating font-families, font-variants, colors, etc.</li>
+          <li>Utilized the text-orientation property to write headings and list/nav in a sideways, vertical orientation.</li> 
+        </ul>
+      </div> 
+      <hr>
+      <div class="sheet-3">
+        <h2>Stylesheet 3 - Derrik Milligan, Dallas Eaton, Adam Ricks</h2>
+        <h4>Changes (Derrik):</h4>
+        <ul>
+          <li>Gave the body some sizing to have things look more formatted</li>
+          <li>Made some better looking buttons that in the first stylesheet</li>
+          <li>Added a color ot the body and the headings</li>
+        </ul>
+        <h4>Changes (Dallas):</h4>
+        <ul>
+          <li>Brought some more color to the page</li>
+          <li>Utilized flex and other properties to organize the top of the page, in spite of not having a header tag</li>
+          <li>added random style elements to help bring uniformity and showcase different usable properties</li>
+          <li>list styles were changes to decimal numbers</li>
+          <li>optimized some width, margin and padding properties across elements</li>
+          <li>other small changes here and there</li>
+        </ul>
+        <h4>Changes (Adam):</h4>
+        <ul>
+          <li>Spaced the menu bar at the top out better</li>
+          <li>Gave the menu bar a border</li>
+          <li>Made it so you could see the top description (it was white before).</li>  
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div id="bottom">Submit this assignment by 5/9/2020</div>
+  </div> <!-- document -->
+
+  <script>
+      // DISABLE STYLES: This function turns off the four stylesheets
+      function disableStyles() {
+        document.styleSheets[0].disabled = true;
+        document.styleSheets[1].disabled = true;
+        document.styleSheets[2].disabled = true;
+        document.styleSheets[3].disabled = true;
+      }
+
+      // APPLY STYLES: This function turns off all four stylesheets, then turns one back on
+      function applyStyle(i) {
+        disableStyles();
+        document.styleSheets[i].disabled = false;
+      }
+  </script>
+</body>
+
+</html>
